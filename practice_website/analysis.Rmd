@@ -1,0 +1,43 @@
+---
+title: "analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#this bit is invisible
+library(tidyverse)
+my_data <- read.csv("data/gapminder_data.csv")
+
+```
+
+## Now let's display some stuff
+
+Let's plot the population of different countries.
+
+```{r include=FALSE}
+population <- my_data%>%
+  select(-continent, - lifeExp, -gdpPercap, -year)
+
+```
+```{r echo=FALSE}
+population%>%
+  ggplot(mapping=(aes(x=country, y=pop))) + geom_point()
+
+```
+
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

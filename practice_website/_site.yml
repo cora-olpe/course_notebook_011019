@@ -1,0 +1,10 @@
+name: "Partials Analysis"
+navbar:
+  title: "Partials Analysis"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "analysis"
+      href: analysis.html
